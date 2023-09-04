@@ -27,7 +27,7 @@ public class TaskInDTOToTask implements IMapper<TaskInDTO, Task> {
 		// User user = new User();
 
 		User user = userRepository.findById(in.getIdUser())
-                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado con ID: " + in.getIdUser()));
+				.orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado con ID: " + in.getIdUser()));
 
 		task.setUser(user); // Asigna el objeto User a la tarea
 		task.setTitleTask(in.getTitleTask());
@@ -37,6 +37,7 @@ public class TaskInDTOToTask implements IMapper<TaskInDTO, Task> {
 		task.setStatusTask(TaskStatus.ON_TIME);
 		// TODO Auto-generated method stub
 		return task;
+
 	}
 
 }

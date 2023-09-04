@@ -28,7 +28,7 @@ public class SwaggerConfig {
 
 		private ApiInfo apiInfo() {
 		    return new ApiInfo(
-		      "My REST API TEST by Sergio Adonay Lopez Mejia", 
+		      "My REST API TEST ", 
 		      "This API gonna be my firt try to understand how it works.", 
 		      "API TOS", 
 		      "Terms of service", 

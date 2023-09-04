@@ -4,10 +4,13 @@ import java.time.LocalDateTime;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
+import lombok.Setter;
 
 @Data
+@Setter
 @Entity
 @Table(name = "task")
 public class Task {

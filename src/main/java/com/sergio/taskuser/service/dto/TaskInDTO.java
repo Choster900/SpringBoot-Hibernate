@@ -8,7 +8,9 @@ import javax.persistence.ManyToOne;
 import com.sergio.taskuser.persistence.entity.User;
 
 import lombok.Data;
+import lombok.Getter;
 @Data
+@Getter
 public class TaskInDTO {
 	// Definimos la relación con la tabla usuarios
     private Long idUser;

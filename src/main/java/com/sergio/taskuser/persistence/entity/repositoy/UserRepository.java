@@ -9,11 +9,7 @@ import com.mysql.cj.x.protobuf.MysqlxCrud.Collection;
 import com.sergio.taskuser.persistence.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
-	@Query("SELECT u FROM User u")
-	List<User> findAllUsersWithoutTasks();
 
-
-
-	@Query(value = "SELECT * FROM user u WHERE u.id_user IN (SELECT DISTINCT id_user FROM task)", nativeQuery = true)
-	java.util.Collection<User> usuariosConTareas();
+	@Query("SELECT DISTINCT u FROM User u LEFT JOIN FETCH u.tasksList")
+	List<User> findAllUsersWithTasks();
 }
